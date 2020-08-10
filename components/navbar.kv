@@ -1,0 +1,20 @@
+#:kivy 1.10.0
+<NavBar@BoxLayout>:
+    orientation: 'horizontal'
+    size_hint_y: 0.2
+    spacing: 10
+    Button:
+        text: 'News'
+        on_press: 
+            app.root.transition.direction = 'left'
+            app.root.current = '_news_screen_'
+    Button:
+        text: 'Spotify'
+        on_press: 
+            app.root.transition.direction = 'left'
+            app.root.current = '_spotify_screen_'
+    Button:
+        text: 'Deals'
+        on_press: 
+            app.root.transition.direction = 'left'
+            app.root.current = '_deals_screen_'
