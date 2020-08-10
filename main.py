@@ -64,4 +64,5 @@ class MainApp(App):
 if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
+    Window.size = (800, 480)
     MainApp().run()
