@@ -1,0 +1,28 @@
+#:kivy 1.10.0
+
+<SpotifyScreen>:
+    name: '_spotify_screen_'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: spotify_screen_label
+            text: "Hi, I'm the Spotify! screen!"
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.2
+            spacing: 10
+            Button:
+                text: '<-- News'
+                on_press: 
+                    root.manager.transition.direction = 'right'
+                    root.manager.current = '_news_screen_'
+            Button:
+                text: "Home"
+                on_press: 
+                    root.manager.transition.direction = 'up'
+                    root.manager.current = '_home_screen_'
+            Button:
+                text: 'Deals --> '
+                on_press: 
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = '_deals_screen_'
