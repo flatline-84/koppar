@@ -10,7 +10,8 @@ Think of this like a Magic Mirror but smaller.
 
 # Installation
 1. Install kivy following their instructions
-2. Have main.py run on boot or login
+2. `chmod +x main.py` after cloning / pulling.
+3. Have main.py run on boot or login
 
 ## Running with LightDM
 1. Add a file in `/usr/share/xsessions/koppar.desktop`

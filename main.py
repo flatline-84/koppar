@@ -2,7 +2,10 @@
 import kivy
 kivy.require('1.11.1')
 
+import platform
+
 from kivy.app import App
+from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.clock import Clock
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
@@ -59,4 +62,6 @@ class MainApp(App):
         return MyScreenManager()
 
 if __name__ == "__main__":
+    if not platform.system() == 'Windows':
+        Window.fullscreen = True
     MainApp().run()
