@@ -19,6 +19,8 @@ from backend.screens.spotifyscreen import SpotifyScreen
 from backend.screens.dealsscreen import DealsScreen
 from backend.screens.settingsscreen import SettingsScreen
 
+from backend.debug.touchtracer import Touchtracer
+
 Config.set('graphics', 'resizable', True) 
 
 
@@ -57,8 +59,13 @@ class MainApp(App):
     def build(self):
         return MyScreenManager()
 
+class DebugTracer(App):
+    def build(self):
+        return TouchTracer()
+
 if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
     Window.size = (800, 480)
-    MainApp().run()
+    DebugTracer().run()
+    # MainApp().run()
