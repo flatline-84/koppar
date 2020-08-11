@@ -26,7 +26,8 @@ from backend.debug.touchtracer import TouchTracer
 # Config.set('input', 'hidinput', 'invert_y=1')
 # config = ConfigParser()
 Config.read('koppar.ini')
-# Config.set('input', 'mouse', 'disable_on_activity')
+Config.set('input', 'mouse', 'disable_on_activity')
+Config.set('input', '%(name)s', 'probesysfs,provider=hidinput,param=invert_y=1')
 Config.write()
 # Config.read('koppar.ini')
 # Config.write()
@@ -85,4 +86,5 @@ if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
     # DebugTracer().run()
+    print(kivy.input.MotionEventFactory.list())
     MainApp().run()
