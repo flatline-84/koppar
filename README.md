@@ -10,8 +10,8 @@ Think of this like a Magic Mirror but smaller.
 
 # Installation
 1. Install kivy following their instructions
-2. `chmod +x main.py` after cloning / pulling.
-3. Have main.py run on boot or login
+2. `chmod +x koppar.sh` after cloning / pulling.
+3. Have koppar.sh run on boot or login
 
 ## Running with LightDM
 1. Add a file in `/usr/share/xsessions/koppar.desktop`
@@ -19,7 +19,7 @@ Think of this like a Magic Mirror but smaller.
     ```
     [Desktop Entry]
     Type=Application
-    Exec=/path/to/koppar/main.py
+    Exec=/path/to/koppar/koppar.sh
     Name=Koppar
     Comment=Testing
     ```
