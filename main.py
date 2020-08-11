@@ -6,7 +6,7 @@ import platform
 import sys
 
 from kivy.app import App
-from kivy.config import Config  
+from kivy.config import Config, ConfigParser
 from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.clock import Clock
@@ -22,16 +22,18 @@ from backend.screens.settingsscreen import SettingsScreen
 
 from backend.debug.touchtracer import TouchTracer
 
-Config.set('graphics', 'resizable', True) 
-Config.set('input', 'hidinput', 'invert_y=1')
-
+# Config.set('graphics', 'resizable', True) 
+# Config.set('input', 'hidinput', 'invert_y=1')
+# config = ConfigParser()
+Config.read('koppar.ini')
+# Config.set('input', 'mouse', 'disable_on_activity')
+Config.write()
 # Config.read('koppar.ini')
 # Config.write()
 # Config.write()
 # causing all the freaking issues with the touchscreen
 # made a phantom press mirrored exactly across from the mouse input
 # no idea why
-# Config.set('input', 'hidinput', 'disable_on_activity')
 # [input]
 #     mouse = mouse,disable_on_activity
 
@@ -82,7 +84,5 @@ class DebugTracer(App):
 if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
-    
-
-    DebugTracer().run()
+    # DebugTracer().run()
     MainApp().run()
