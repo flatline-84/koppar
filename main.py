@@ -11,25 +11,18 @@ from kivy.clock import Clock
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.uix.boxlayout import BoxLayout
 
+# Import the desired screens
+from backend.screens.homescreen import HomeScreen
+from backend.screens.newsscreen import NewsScreen
+from backend.screens.spotifyscreen import SpotifyScreen
+from backend.screens.dealsscreen import DealsScreen
+
+
 # Builder.load_file("components/homescreen.kv")
 # Builder.load_file("components/newsscreen.kv")
 # Builder.load_file("components/spotifyscreen.kv")
 # Builder.load_file("components/dealsscreen.kv")
 # Builder.load_file("components/navbar.kv")
-
-class HomeScreen(Screen):
-    # def build(self):
-        # return Builder.load_file("homescreen.kv")
-    pass
-
-class NewsScreen(Screen):
-    pass
-
-class SpotifyScreen(Screen):
-    pass
-
-class DealsScreen(Screen):
-    pass
 
 class MyScreenManager(ScreenManager):
 

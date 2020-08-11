@@ -31,3 +31,8 @@ Think of this like a Magic Mirror but smaller.
     autologin-user-timeout=0
     ```
 5. Logout and then set the desktop environment to your new Koppar app. I don't know how to do this from the LightDM config file.
+
+# ToDo:
+* dynamic screens? plugin loader?
+* redo navigation -> maybe gestures?
+* everything
