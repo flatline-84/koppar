@@ -11,10 +11,10 @@ from kivy.clock import Clock
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.uix.boxlayout import BoxLayout
 
-Builder.load_file("components/homescreen.kv")
-Builder.load_file("components/newsscreen.kv")
-Builder.load_file("components/spotifyscreen.kv")
-Builder.load_file("components/dealsscreen.kv")
+# Builder.load_file("components/homescreen.kv")
+# Builder.load_file("components/newsscreen.kv")
+# Builder.load_file("components/spotifyscreen.kv")
+# Builder.load_file("components/dealsscreen.kv")
 # Builder.load_file("components/navbar.kv")
 
 class HomeScreen(Screen):
@@ -56,7 +56,7 @@ class MyScreenManager(ScreenManager):
     #     Clock.schedule_once(self.screen_switch_home, 2)
 
 class MainApp(App):
-    kv_directory = 'components'
+    kv_directory = 'ui'
 
     def build(self):
         return MyScreenManager()
