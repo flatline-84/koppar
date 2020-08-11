@@ -32,6 +32,17 @@ Think of this like a Magic Mirror but smaller.
     ```
 5. Logout and then set the desktop environment to your new Koppar app. I don't know how to do this from the LightDM config file.
 
+## Calibrating Touchscreen
+1. `sudo su`
+2. `aptitude install libts-bin`
+3. This will create a configuration file called /etc/ts.conf
+4. `export TSLIB_TSDEVICE=/dev/input/event0`
+5. `export TSLIB_FBDEVICE=/dev/fb0`
+6. `ts_calibrate`
+7. This calibration data will be written to a calibration file called /etc/pointercal.
+8. `ts_test`
+9. Reboot.
+
 # ToDo:
 * dynamic screens? plugin loader?
 * redo navigation -> maybe gestures?

@@ -37,7 +37,7 @@ class MyScreenManager(ScreenManager):
         Window.bind(on_motion=self.on_motion)
     #     Clock.schedule_once(self.screen_switch_home, 2)
 
-    def on_motion(self, window, pos):
+    def on_motion(self, window, pos, eh):
         return
 
     # def screen_switch_home(self, dt):
@@ -67,7 +67,8 @@ class DebugTracer(App):
     def __init__(self, **kwargs):
         Window.size = (800, 480)
         Window.bind(on_motion=self.on_motion)
-    def on_motion(self, window, pos):
+
+    def on_motion(self, window, pos, eh):
         pass
 
     def build(self):
