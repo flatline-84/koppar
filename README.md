@@ -36,3 +36,8 @@ Think of this like a Magic Mirror but smaller.
 * dynamic screens? plugin loader?
 * redo navigation -> maybe gestures?
 * everything
+
+# Credit
+
+Images downloaded from: https://icons8.com/icon/pack/free-icons/plasticine
+Raspberry Pi Case used: https://www.thingiverse.com/thing:3374265

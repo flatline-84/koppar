@@ -1,0 +1,42 @@
+#:kivy 1.10.0
+
+<SettingsScreen>:
+    name: '_settings_screen_'
+    canvas.before:
+        Color:
+            rgba: 0.2,0.2,0.25,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'horizontal'
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 40
+            spacing: 20
+            Button:
+                on_press: root.restart(self)
+                Image:
+                    allow_stretch: False
+                    keep_ratio: True
+                    source: 'res/images/restart-100.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                on_press: root.shutdown(self)
+                Image:
+                    allow_stretch: False
+                    keep_ratio: True
+                    source: 'res/images/shutdown-100.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+            Button:
+                on_press: root.update(self)
+                Image:
+                    allow_stretch: False
+                    keep_ratio: True
+                    source: 'res/images/synchronize-100.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+        NavBar:

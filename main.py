@@ -5,6 +5,7 @@ kivy.require('1.11.1')
 import platform
 
 from kivy.app import App
+from kivy.config import Config  
 from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.clock import Clock
@@ -16,6 +17,9 @@ from backend.screens.homescreen import HomeScreen
 from backend.screens.newsscreen import NewsScreen
 from backend.screens.spotifyscreen import SpotifyScreen
 from backend.screens.dealsscreen import DealsScreen
+from backend.screens.settingsscreen import SettingsScreen
+
+Config.set('graphics', 'resizable', True) 
 
 
 # Builder.load_file("components/homescreen.kv")
