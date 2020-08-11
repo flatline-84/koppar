@@ -84,5 +84,5 @@ if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
     
-    # DebugTracer().run()
-    MainApp().run()
+    DebugTracer().run()
+    # MainApp().run()
