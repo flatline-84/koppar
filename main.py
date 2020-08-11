@@ -19,7 +19,7 @@ from backend.screens.spotifyscreen import SpotifyScreen
 from backend.screens.dealsscreen import DealsScreen
 from backend.screens.settingsscreen import SettingsScreen
 
-from backend.debug.touchtracer import Touchtracer
+from backend.debug.touchtracer import TouchTracer
 
 Config.set('graphics', 'resizable', True) 
 

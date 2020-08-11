@@ -21,7 +21,7 @@ def calculate_points(x1, y1, x2, y2, steps=5):
     return o
 
 
-class Touchtracer(FloatLayout):
+class TouchTracer(FloatLayout):
 
     def on_touch_down(self, touch):
         win = self.get_parent_window()
