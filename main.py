@@ -22,6 +22,9 @@ from backend.screens.settingsscreen import SettingsScreen
 from backend.debug.touchtracer import TouchTracer
 
 Config.set('graphics', 'resizable', True) 
+Config.set('input', 'mouse', 'disable_on_activity')
+# [input]
+#     mouse = mouse,disable_on_activity
 
 
 # Builder.load_file("components/homescreen.kv")
