@@ -10,7 +10,7 @@ Think of this like a Magic Mirror but smaller.
 
 # Installation
 1. Install kivy following their instructions
-2. `chmod +x koppar.sh` after cloning / pulling.
+2. `chmod +x koppar.sh` after cloning / pulling. Maybe not
 3. Have koppar.sh run on boot or login
 
 ## Running with LightDM
