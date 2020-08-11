@@ -31,10 +31,14 @@ Config.set('graphics', 'resizable', True)
 # Builder.load_file("components/navbar.kv")
 
 class MyScreenManager(ScreenManager):
-
     def __init__(self, **kwargs):
         super(MyScreenManager, self).__init__(**kwargs)
+        Window.size = (800, 480)
+        Window.bind(on_motion=self.on_motion)
     #     Clock.schedule_once(self.screen_switch_home, 2)
+
+    def on_motion(self, window, pos):
+        return
 
     # def screen_switch_home(self, dt):
     #     self.current = '_home_screen_'
@@ -55,17 +59,23 @@ class MyScreenManager(ScreenManager):
 
 class MainApp(App):
     kv_directory = 'ui'
-
     def build(self):
         return MyScreenManager()
 
 class DebugTracer(App):
+
+    def __init__(self, **kwargs):
+        Window.size = (800, 480)
+        Window.bind(on_motion=self.on_motion)
+    def on_motion(self, window, pos):
+        pass
+
     def build(self):
         return TouchTracer()
 
 if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
-    Window.size = (800, 480)
-    DebugTracer().run()
-    # MainApp().run()
+    
+    # DebugTracer().run()
+    MainApp().run()
