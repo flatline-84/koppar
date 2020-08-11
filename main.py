@@ -23,10 +23,15 @@ from backend.screens.settingsscreen import SettingsScreen
 from backend.debug.touchtracer import TouchTracer
 
 Config.set('graphics', 'resizable', True) 
+Config.set('input', 'hidinput', 'invert_y=1')
+
+# Config.read('koppar.ini')
+# Config.write()
+# Config.write()
 # causing all the freaking issues with the touchscreen
 # made a phantom press mirrored exactly across from the mouse input
 # no idea why
-Config.set('input', 'hidinput', 'disable_on_activity')
+# Config.set('input', 'hidinput', 'disable_on_activity')
 # [input]
 #     mouse = mouse,disable_on_activity
 
@@ -78,7 +83,6 @@ if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
     
-    if (len(sys.argv) > 1 and sys.argv[1] == '-d'):
-        DebugTracer().run()
-    else: 
-        MainApp().run()
+
+    DebugTracer().run()
+    MainApp().run()
