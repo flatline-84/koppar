@@ -3,6 +3,7 @@ import kivy
 kivy.require('1.11.1')
 
 import platform
+import sys
 
 from kivy.app import App
 from kivy.config import Config  
@@ -70,13 +71,6 @@ class MainApp(App):
 
 class DebugTracer(App):
 
-    def __init__(self, **kwargs):
-        Window.size = (800, 480)
-        Window.bind(on_motion=self.on_motion)
-
-    def on_motion(self, window, pos, eh):
-        pass
-
     def build(self):
         return TouchTracer()
 
@@ -84,5 +78,7 @@ if __name__ == "__main__":
     if not platform.system() == 'Windows':
         Window.fullscreen = True
     
-    DebugTracer().run()
-    # MainApp().run()
+    if (len(sys.argv) > 1 and sys.argv[1] == '-d'):
+        DebugTracer().run()
+    else: 
+        MainApp().run()
