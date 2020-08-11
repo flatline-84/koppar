@@ -8,7 +8,7 @@ from kivy.app import App
 from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.clock import Clock
-from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.boxlayout import BoxLayout
 
 # Import the desired screens
@@ -28,7 +28,6 @@ class MyScreenManager(ScreenManager):
 
     def __init__(self, **kwargs):
         super(MyScreenManager, self).__init__(**kwargs)
-        self.transition = FadeTransition()
     #     Clock.schedule_once(self.screen_switch_home, 2)
 
     # def screen_switch_home(self, dt):

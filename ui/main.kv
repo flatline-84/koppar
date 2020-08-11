@@ -1,10 +1,14 @@
 #:kivy 1.10.0
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+#: include ui/components/navbar.kv
 #: include ui/screens/homescreen.kv
 #: include ui/screens/newsscreen.kv
 #: include ui/screens/spotifyscreen.kv
 #: include ui/screens/dealsscreen.kv
 
 <MyScreenManager>:
+    transition: FadeTransition()
     HomeScreen:
         id: home_screen
     NewsScreen:

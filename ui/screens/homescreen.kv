@@ -1,11 +1,17 @@
 #:kivy 1.10.0
-#: include ui/components/navbar.kv
 
 <HomeScreen>:
     name: '_home_screen_'
-    background_color: 1, 0.5, 1, 1
+    canvas.before:
+        Color:
+            rgba: 0.5,0.75,1,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
     BoxLayout:
-        orientation: 'vertical'
+        orientation: 'horizontal'
+        background_color: 'red'
         Label:
             id: home_screen_label
             text: "Hi, I'm the Home screen!"

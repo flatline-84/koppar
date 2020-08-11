@@ -1,8 +1,13 @@
 #:kivy 1.10.0
 <NavBar@BoxLayout>:
-    orientation: 'horizontal'
-    size_hint_y: 0.2
+    orientation: 'vertical'
+    size_hint_x: 0.2
     spacing: 10
+    Button:
+        text: 'Home'
+        on_press: 
+            app.root.transition.direction = 'left'
+            app.root.current = '_home_screen_'
     Button:
         text: 'News'
         on_press: 

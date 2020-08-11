@@ -2,27 +2,15 @@
 
 <NewsScreen>:
     name: '_news_screen_'
+    canvas.before:
+        Color:
+            rgba: 0.845,0.802,0.839,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
     BoxLayout:
-        orientation: 'vertical'
+        orientation: 'horizontal'
         Label:
             id: news_screen_label
             text: "Hi, I'm the news screen!"
-        BoxLayout:
-            orientation: 'horizontal'
-            size_hint_y: 0.2
-            spacing: 10
-            Button:
-                text: '<-- Home'
-                on_press: 
-                    root.manager.transition.direction = 'right'
-                    root.manager.current = '_home_screen_'
-            Button:
-                text: "Home"
-                on_press: 
-                    root.manager.transition.direction = 'up'
-                    root.manager.current = '_home_screen_'
-            Button:
-                text: 'Spotify --> '
-                on_press: 
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = '_spotify_screen_'
+        NavBar:
