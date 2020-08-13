@@ -12,6 +12,7 @@ Think of this like a Magic Mirror but smaller.
 1. Install kivy following their instructions
 2. `chmod +x koppar.sh` after cloning / pulling. Maybe not
 3. Have koppar.sh run on boot or login
+4. Launch with `-m inspector` and press Ctrl+E to debug the application
 
 ## Running with LightDM
 1. Add a file in `/usr/share/xsessions/koppar.desktop`

@@ -28,6 +28,7 @@ from backend.debug.touchtracer import TouchTracer
 Config.read('koppar.ini')
 # Config.set('input', 'mouse', 'disable_on_activity')
 Config.set('input', '%(name)s', 'probesysfs,provider=hidinput,param=invert_y=0')
+# Config.set('koppar', 'colour_home', )
 Config.write()
 # Config.read('koppar.ini')
 # Config.write()
@@ -78,7 +79,6 @@ class MainApp(App):
         return MyScreenManager()
 
 class DebugTracer(App):
-
     def build(self):
         return TouchTracer()
 
