@@ -12,8 +12,16 @@
 
     BoxLayout:
         orientation: 'horizontal'
-        BoxLayout:
+        FloatLayout:
             Label:
-                id: home_screen_label
-                text: "Hi, I'm the Home screen!"
+                id: home_screen_label_time
+                size: self.texture_size
+                font_size: '80sp'
+                font_name: "MainFont"
+                pos_hint: {'x':-0.30, 'y':0.4}
+            Label:
+                id: home_screen_label_date
+                size: self.texture_size
+                font_size: '30sp'
+                pos_hint: {'x':-0.3, 'y':0.2}
         NavBar:

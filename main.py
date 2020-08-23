@@ -12,6 +12,9 @@ from kivy.lang import Builder
 from kivy.clock import Clock
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.boxlayout import BoxLayout
+# from kivy.core.text import FontContextManager as FCM
+from kivy.uix.label import Label
+from kivy.core.text import LabelBase
 
 # Import the desired screens
 from backend.screens.homescreen import HomeScreen
@@ -39,6 +42,9 @@ Config.write()
 # [input]
 #     mouse = mouse,disable_on_activity
 
+# Register a new font to be used in the application
+LabelBase.register(name="MainFont", fn_regular="res/fonts/RobotoCondensed-Regular.ttf")
+LabelBase.register(name="BitFont", fn_regular="res/fonts/PressStart2P-Regular.ttf")
 
 # Builder.load_file("components/homescreen.kv")
 # Builder.load_file("components/newsscreen.kv")
@@ -51,7 +57,7 @@ class MyScreenManager(ScreenManager):
         super(MyScreenManager, self).__init__(**kwargs)
         Window.size = (800, 480)
         Window.bind(on_motion=self.on_motion)
-    #     Clock.schedule_once(self.screen_switch_home, 2)
+        # Clock.schedule_once(self.screen_switch_home, 2)
 
     def on_motion(self, window, pos, eh):
         return
