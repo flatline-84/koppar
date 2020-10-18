@@ -8,6 +8,9 @@ The purpose of this project is to have information I find useful on my desk.
 
 Think of this like a Magic Mirror but smaller.
 
+# Old GUI in Kivy
+![](.screenshots/old_gui.gif)
+
 # Installation
 1. Install kivy following their instructions
 2. `chmod +x koppar.sh` after cloning / pulling. Maybe not
@@ -51,5 +54,5 @@ Think of this like a Magic Mirror but smaller.
 
 # Credit
 
-Images downloaded from: https://icons8.com/icon/pack/free-icons/plasticine
+Images downloaded from: https://icons8.com/icon/pack/free-icons/plasticine  
 Raspberry Pi Case used: https://www.thingiverse.com/thing:3374265
