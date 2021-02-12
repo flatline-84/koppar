@@ -2,3 +2,4 @@ __pycache__/
 .vscode/
 Thumbs.db
 config.py
+*/node_modules/
