@@ -1,12 +1,13 @@
 var express = require('express');
-var routes = requite('./routes/index');
+var routes = require('./routes/index');
 
 var app = express();
 
 app.use('/api/v1', routes);
 
-app.listen(process.env.PORT || 3000, () =>{
-	console.log('Listing on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () =>{
+	console.log('Listing on port ' + PORT);
 });
 
 module.exports = app;
